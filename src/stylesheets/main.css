@@ -1,1 +1,154 @@
-/* Your styles go here */
+/* Fuentes y colores inspirados en la naturaleza */
+:root {
+  --naranja: #ffa726;
+  --negro: #212121;
+  --verde: #388e3c;
+  --crema: #fff8e1;
+  --gris: #eeeeee;
+  --blanco: #ffffff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--crema);
+  color: var(--negro);
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(to right, var(--naranja), var(--verde));
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Nav */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--verde);
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--naranja);
+}
+
+/* Main Grid */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.content, .sidebar {
+  background-color: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.sidebar-img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/* Tablet */
+@media (min-width: 700px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+}
